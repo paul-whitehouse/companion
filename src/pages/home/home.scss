@@ -1,0 +1,45 @@
+page-home {
+
+  .horse-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    overflow: hidden;
+    width: 30%;
+  }
+
+  .odds {
+    border: 2px solid darkblue;
+    background-color: white;
+    padding: 4px;
+    margin: 12px;
+    font-size: 20px;
+    display: inline-block;
+    width: 60px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .race-date {
+    font-size: 16px;
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+  }
+
+  .block {
+    min-height: 50px;
+    padding: 10px;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+
+  .place {
+    color: green;
+  }
+
+}
