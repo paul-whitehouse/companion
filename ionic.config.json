@@ -2,5 +2,5 @@
   "name": "betting-companion",
   "app_id": "",
   "v2": true,
-  "typescript": true
+  "typescript": false
 }
