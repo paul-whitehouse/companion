@@ -1,0 +1,14 @@
+<ion-item-sliding>
+	<ion-item tappable (click)="selectHorse(horse)">
+		<div class="block">
+			<ion-icon name="{{horse.getStatusIcon()}}" class="icon"></ion-icon>
+			<span class="horse-name">{{horse.name | capitalize }}</span>
+			<span class="race-date">{{horse.displayDateFull()}}</span>
+			<span class="odds">{{horse.oddsDisplay}}</span>
+			<span *ngIf="horse.placeBettingSet()">
+				<ion-icon name="podium" [color]="horse.placeBetColor()"></ion-icon>
+				<ion-badge item-right [color]="horse.placeBetColor()">{{horse.placeBetOddsDisplay}}</ion-badge>
+			</span>
+		</div>
+	</ion-item>
+</ion-item-sliding>

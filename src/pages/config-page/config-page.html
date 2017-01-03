@@ -1,0 +1,50 @@
+<!--
+  Generated template for the ConfigPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Configuration</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <form action="">
+      <ion-item>
+        <ion-label fixed text-right>Max number selections</ion-label>
+        <ion-range min="1" max="10" name="maxSelections">
+          <ion-label range-left>1</ion-label>
+          <ion-label range-right>10</ion-label>
+        </ion-range>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed text-right>Plan budget</ion-label>
+          <ion-input type="number">10.00</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed text-right>Minimum stake</ion-label>
+        <ion-input type="number">0.50</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed text-right>Single bets only</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-range min="0.2" max="1.0"></ion-range>
+      </ion-item>
+    </form>
+
+
+
+  </ion-list>
+
+
+
+
+</ion-content>

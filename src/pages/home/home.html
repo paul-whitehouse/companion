@@ -4,6 +4,12 @@
 			Ionic Blank
 		</ion-title>
 		<ion-buttons end>
+			<button ion-button icon-only (click)="saveHorses()" [disabled]="horses.length === 0">
+        <ion-icon name="briefcase"></ion-icon>
+      </button>
+			<button ion-button icon-only (click)="deleteHorses()" [disabled]="!canDelete()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
 			<button ion-button icon-only (click)="addHorse()">
         <ion-icon name="add-circle"></ion-icon>
       </button>
@@ -19,9 +25,12 @@
 <ion-menu [content]="menu">
 	<ion-content>
 		<ion-list>
-			<button ion-item (click)="openPage(homePage)">
+			<button ion-item (click)="openPage('HomePage')">
             <ion-icon name="home"></ion-icon>
             Home</button>
+			<button ion-item (click)="openPage('ConfigPage')">
+            <ion-icon name="build"></ion-icon>
+            Configuration</button>
 		</ion-list>
 	</ion-content>
 
@@ -33,32 +42,8 @@
 
 	<ion-list>
 
-		<ion-item-sliding>
-			<ion-item tappable>
-				<div class="block">
-					<ion-icon name="thumbs-up" class="icon"></ion-icon>
+		<horse-item *ngFor="let horse of horses" [horse]="horse"></horse-item>
 
-					<span class="horse-name">Sherhhar</span>
-					<span class="race-date">14 Oct 3:15pm</span>
-					<span class="odds">7/4</span>
-					<ion-icon name="podium" class="place"></ion-icon>
-				</div>
-			</ion-item>
-		</ion-item-sliding>
-
-				<ion-item-sliding>
-			<ion-item tappable>
-				<div class="block">
-					<ion-icon name="trophy" class="icon" color="secondary"></ion-icon>
-
-					<span class="horse-name">Golden Boy II (Additional information)</span>
-					<span class="race-date">1 Sept 12:50pm</span>
-					<span class="odds">15/4</span>
-					<ion-icon name="podium" class="place"></ion-icon>
-				</div>
-			</ion-item>
-		</ion-item-sliding>
-	
 
 	</ion-list>
 
