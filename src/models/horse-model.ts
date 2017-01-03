@@ -21,6 +21,7 @@ export enum HORSE_STATUS {
 export enum PLACE_BET { NO, ALLOWED, FORCE };
 
 export class Horse {
+  id: number;
   name: string;
   eventDateTime: string;
   oddsDisplay: string;
